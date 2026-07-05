@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mohamed&Rokaya Engagement Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:20px;
+    gap:40px;
+
+    background-image:url("background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.invitation-section{
+  background-image:url("background.jpg");
+}
+
+    .invitation-card{
+      width: 90%;
+      max-width: 450px;
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 10px 30px #978F66;
+      text-align:center;
+      padding-bottom:30px;
+    }
+
+    .cover{
+      width:100%;
+      height:320px;
+      overflow:hidden;
+    }
+
+    .cover img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .content{
+      padding:25px;
+    }
+
+    .title{
+      font-size:20px;
+      font-family: 'Alex Brush', cursive;
+      color:#622B14;
+      letter-spacing:2px;
+      margin-bottom:10px;
+    }
+
+    .names{
+      font-size:36px;
+      font-family:'Allura', cursive;
+      color:#622B14;
+      font-weight:600;
+      line-height:1.3;
+      margin-bottom:20px;
+    }
+
+  
+
+    .date-btn{
+  width:100%;
+
+  margin-top:25px;
+  padding:18px;
+
+  border:none;
+  border-radius:18px;
+
+  background:#622B14;
+
+  cursor:pointer;
+
+  transition:0.4s;
+}
+
+.date-btn:hover{
+  transform:scale(1.03);
+  background:#7a3a1d;
+}
+
+.date{
+  font-size:24px;
+  color:#E4D6A9;
+  font-family: 'Alex Brush', cursive;
+
+  margin-bottom:8px;
+}
+
+.time{
+  font-size:18px;
+  color:#E4D6A9;
+  font-family: 'Alex Brush', cursive;
+}
+
+    .invite-text{
+  margin-top:15px;
+  color:#622B14;
+  font-size:15px;
+  font-family:'Alex Brush', cursive;
+  line-height:1.6;
+}
+
+.heart{
+  color:red;
+  margin-left:10px;
+}
+section{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px){
+
+  .card{
+    width:90%;
+    max-width:350px;
+  }
+
+  .cover{
+    height:260px;
+  }
+
+  .title{
+    font-size:18px;
+  }
+
+  .names{
+    font-size:32px;
+  }
+
+  .invite-text{
+    font-size:14px;
+  }
+
+  .date{
+    font-size:22px;
+  }
+
+  .time{
+    font-size:16px;
+  }
+
+  .date-btn{
+    padding:16px;
+  }
+
+}
+
+@media (min-width: 769px){
+
+  .card{
+    max-width:500px;
+  }
+
+  .cover{
+    height:380px;
+  }
+
+  .title{
+    font-size:24px;
+  }
+
+  .names{
+    font-size:48px;
+  }
+
+  .invite-text{
+    font-size:18px;
+  }
+
+  .date{
+    font-size:30px;
+  }
+
+  .time{
+    font-size:20px;
+  }
+
+}
+
+    /* Button */
+
+/* Floating Hearts */
+
+.hearts{
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hearts span{
+  position:absolute;
+  bottom:-100px;
+
+  color:#ffb6c1;
+  font-size:25px;
+
+  animation:float 10s linear infinite;
+}
+
+.hearts span:nth-child(1){
+  left:10%;
+  animation-duration:8s;
+}
+
+.hearts span:nth-child(2){
+  left:20%;
+  animation-duration:12s;
+}
+
+.hearts span:nth-child(3){
+  left:35%;
+  animation-duration:9s;
+}
+
+.hearts span:nth-child(4){
+  left:50%;
+  animation-duration:11s;
+}
+
+.hearts span:nth-child(5){
+  left:65%;
+  animation-duration:7s;
+}
+
+.hearts span:nth-child(6){
+  left:80%;
+  animation-duration:10s;
+}
+
+.hearts span:nth-child(7){
+  left:90%;
+  animation-duration:13s;
+}
+
+@keyframes float{
+
+  0%{
+    transform:translateY(0) rotate(0deg);
+    opacity:0;
+  }
+
+  20%{
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(-120vh) rotate(360deg);
+    opacity:0;
+  }
+
+}
+
+/* Countdown Card */
+
+.countdown-card{
+  position:relative;
+  z-index:2;
+
+  width:90%;
+  max-width:700px;
+
+  padding:50px 30px;
+
+  border-radius:30px;
+
+  background:rgba(255,255,255,0.12);
+
+  backdrop-filter:blur(15px);
+
+  text-align:center;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:scale(1.03);
+}
+
+.title{
+  font-size:60px;
+  color:#fff;
+      font-family:'Allura', cursive;
+
+  margin-bottom:10px;
+}
+
+.subtitle{
+  color:#f7e7ce;
+  font-size:18px;
+
+  margin-bottom:40px;
+
+  letter-spacing:2px;
+}
+
+/* Countdown */
+.countdown-section{
+  background-image:url("background.jpg");
+}
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.box{
+  width:130px;
+  height:130px;
+
+  border-radius:25px;
+
+  background:#622B14;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  transition:0.4s;
+}
+
+.box:hover{
+  transform:translateY(-10px);
+  background:#7a3a1d;
+}
+
+.box h2{
+  color:#E4D6A9;
+  font-size:42px;
+}
+
+.box span{
+  color:white;
+  margin-top:5px;
+  letter-spacing:2px;
+  font-size:14px;
+}
+
+/* Button */
+
+.btn{
+  margin-top:40px;
+
+  padding:15px 35px;
+
+  border:none;
+  border-radius:50px;
+
+  background:#E4D6A9;
+  color:#622B14;
+
+  font-size:16px;
+  cursor:pointer;
+
+  transition:0.4s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  background:white;
+}
+
+.message{
+  margin-top:20px;
+  color:white;
+  font-size:18px;
+
+  opacity:0;
+  transition:0.5s;
+}
+
+.show{
+  opacity:1;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px){
+
+  .card{
+    width:90%;
+    max-width:350px;
+  }
+
+  .cover{
+    height:260px;
+  }
+
+  .title{
+    font-size:18px;
+  }
+
+  .names{
+    font-size:32px;
+  }
+
+  .invite-text{
+    font-size:14px;
+  }
+
+  .date{
+    font-size:22px;
+  }
+
+  .time{
+    font-size:16px;
+  }
+
+  .date-btn{
+    padding:16px;
+  }
+
+}
+
+@media (min-width: 769px){
+
+  .card{
+    max-width:500px;
+  }
+
+  .cover{
+    height:380px;
+  }
+
+  .title{
+    font-size:32px;
+  }
+
+  .names{
+    font-size:48px;
+  }
+
+  .invite-text{
+    font-size:18px;
+  }
+
+  .date{
+    font-size:30px;
+  }
+
+  .time{
+    font-size:20px;
+  }
+
+}
+
+.location-card{
+      width:90%;
+      max-width:420px;
+      background:rgba(255,255,255,0.15);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:30px;
+      padding:35px 25px;
+      text-align:center;
+      box-shadow:0 10px 40px rgba(0,0,0,0.3);
+      animation:fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .title{
+      font-family:'Great Vibes',cursive;
+      font-size:48px;
+      color:white;
+      margin-bottom:10px;
+    }
+
+    .subtitle{
+      color:#622B14;
+      font-size:15px;
+      line-height:1.7;
+      margin-bottom:25px;
+    }
+
+    .location-box{
+      background:rgba(255,255,255,0.18);
+      border-radius:20px;
+      padding:20px;
+      margin-bottom:25px;
+      transition:0.4s;
+      cursor:pointer;
+    }
+
+    .location-box:hover{
+      transform:scale(1.05);
+      background:rgba(255,255,255,0.25);
+    }
+
+    .icon{
+      font-size:45px;
+      margin-bottom:10px;
+    }
+
+    .place{
+      color:#622B14;
+      font-size:24px;
+      font-weight:600;
+      margin-bottom:8px;
+    }
+
+    .address{
+      color:#622B14;
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    .btn{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:15px;
+      background:#622B14;
+      color:#E4D6A9;
+      font-size:17px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+      background:#7b3a1c;
+    }
+
+    .tap{
+      margin-top:15px;
+      color:white;
+      font-size:13px;
+      opacity:0.8;
+    }
+
+    /* Responsive Design */
+
+@media (max-width: 768px){
+
+  .card{
+    width:90%;
+    max-width:350px;
+  }
+
+  .cover{
+    height:260px;
+  }
+
+  .title{
+    font-size:18px;
+  }
+
+  .names{
+    font-size:32px;
+  }
+
+  .invite-text{
+    font-size:14px;
+  }
+
+  .date{
+    font-size:22px;
+  }
+
+  .time{
+    font-size:16px;
+  }
+
+  .date-btn{
+    padding:16px;
+  }
+
+}
+
+@media (min-width: 769px){
+
+  .card{
+    max-width:500px;
+  }
+
+  .cover{
+    height:380px;
+  }
+
+  .title{
+    font-size:24px;
+  }
+
+  .names{
+    font-size:48px;
+  }
+
+  .invite-text{
+    font-size:18px;
+  }
+
+  .date{
+    font-size:30px;
+  }
+
+  .time{
+    font-size:20px;
+  }
+  .place{
+    font-size: 24px;
+  }
+
+}
+  </style>
+</head>
+
+<body>
+<section >
+  <div class="invitation-card">
+
+    <div class="cover">
+     
+      <img src="image.jpg" >
+    </div>
+
+    <div class="content">
+
+      <div class="title">
+        Engagement Invitation
+      </div>
+
+      <div class="names">
+        Mohamed <br> & <br> Rokaya
+      </div>
+
+      <div class="invite-text">
+        We are delighted to invite you to celebrate with us❤️
+      </div>
+
+    <br><br>
+
+  <div class="date">
+    30 July 2026
+  </div>
+
+  <div class="time">
+    8:00 PM
+  </div>
+
+
+    </div>
+
+  </div>
+</section>
+<section >
+  <!-- Floating Hearts -->
+
+<div class="hearts">
+
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+
+</div>
+
+<!-- Card -->
+
+<div class="countdown-card">
+
+  <div class="title">
+    M & R
+  </div>
+
+  <div class="subtitle">
+    Countdown To Our Special Day ❤
+  </div>
+
+  <div class="countdown">
+
+    <div class="box">
+      <h2 id="days">00</h2>
+      <span>Days</span>
+    </div>
+
+    <div class="box">
+      <h2 id="hours">00</h2>
+      <span>Hours</span>
+    </div>
+
+    <div class="box">
+      <h2 id="minutes">00</h2>
+      <span>Minutes</span>
+    </div>
+
+    <div class="box">
+      <h2 id="seconds">00</h2>
+      <span>Seconds</span>
+    </div>
+
+  </div>
+
+
+</div>
+</section>
+<section>
+  <div class="hearts">
+
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+
+</div>
+
+  <div class="location-card">
+
+    <div class="title">
+      Our Location
+    </div>
+
+    <div class="subtitle">
+      We can’t wait to celebrate this special day with you ✨
+    </div>
+
+    <div class="location-box"
+    onclick="window.open('https://maps.app.goo.gl/cyRyqS1GQunYsu9s6','_blank')">
+
+      <div class="icon">
+        📍
+      </div>
+
+      <div class="place">
+        Villa vida <br> king mariot
+      </div>
+
+      <div class="address">
+        
+        Tap here to open Google Maps
+      </div>
+
+    </div>
+
+    <button class="btn"
+    onclick="window.open('https://maps.app.goo.gl/cyRyqS1GQunYsu9s6','_blank')">
+      Open Location
+    </button>
+
+    <div class="tap">
+      Click the card or button to navigate 🤎
+    </div>
+
+  </div>
+</section>
+</body>
+
+<script>
+
+/* Countdown */
+
+const targetDate = new Date("July 30, 2026 20:00:00").getTime();
+
+function updateCountdown(){
+
+  const now = new Date().getTime();
+
+  const distance = targetDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24))
+    / (1000 * 60 * 60)
+  );
+
+  const minutes = Math.floor(
+    (distance % (1000 * 60 * 60))
+    / (1000 * 60)
+  );
+
+  const seconds = Math.floor(
+    (distance % (1000 * 60))
+    / 1000
+  );
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+}
+
+setInterval(updateCountdown, 1000);
+
+updateCountdown();
+
+/* Interactive Button */
+
+function goToPage(){
+
+  window.location.href = "last.html";
+
+}
+
+</script>
+</html>
